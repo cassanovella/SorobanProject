@@ -1,4 +1,4 @@
-# EscrowCart
+# SorobanProject
 Trustless buyer-seller escrow for safe peer-to-peer transactions on Stellar.
 
 ---
