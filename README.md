@@ -1,22 +1,50 @@
-# Soroban Project
+# EscrowCart
+Trustless buyer-seller escrow for safe peer-to-peer transactions on Stellar.
 
-## Project Structure
+---
 
-This repository uses the recommended structure for a Soroban project:
+## Problem
+A Facebook Marketplace buyer in Manila pays a seller upfront via GCash and risks losing ₱5,000 if the item is fake or never delivered.
 
-```text
-.
-├── contracts
-│   └── hello_world
-│       ├── src
-│       │   ├── lib.rs
-│       │   └── test.rs
-│       └── Cargo.toml
-├── Cargo.toml
-└── README.md
-```
+---
 
-- New Soroban contracts can be put in `contracts`, each in their own directory. There is already a `hello_world` contract in there to get you started.
-- If you initialized this project with any other example contracts via `--with-example`, those contracts will be in the `contracts` directory as well.
-- Contracts should have their own `Cargo.toml` files that rely on the top-level `Cargo.toml` workspace for their dependencies.
-- Frontend libraries can be added to the top-level directory as well. If you initialized this project with a frontend template via `--frontend-template` you will have those files already included.
+## Solution
+EscrowCart allows buyers to lock funds in a Soroban smart contract and only release them once the item is received, eliminating the need to trust unknown sellers.
+
+---
+
+## Timeline
+- Day 1: Smart contract (escrow logic)
+- Day 2: Testing + bug fixes
+- Day 3: Basic UI + demo flow
+
+---
+
+## Stellar Features Used
+- Soroban Smart Contracts (escrow logic)
+- On-chain state storage (escrow tracking)
+
+---
+
+## Vision and Purpose
+EscrowCart aims to make informal e-commerce in Southeast Asia safer by removing trust from transactions.  
+By leveraging Stellar’s fast and low-cost infrastructure, it enables secure payments between buyers and sellers who do not know each other.
+
+---
+
+## Prerequisites
+- Rust (latest stable)
+- Soroban CLI (v20+)
+- Cargo
+
+---
+
+## Deployed Contract Link
+[1] https://stellar.expert/explorer/testnet/tx/9540138263aaf7d32b307914294e1233e2b492431813ce071a375bef5e7b02e1
+[2] https://lab.stellar.org/r/testnet/contract/CD3H6DMHHFMV2AYN2XKPSXUNHEFNOO22VQFJO42MKBHBDNUYTEFL6T7M
+
+## Build
+```bash
+soroban contract build
+
+
